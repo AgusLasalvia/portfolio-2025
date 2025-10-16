@@ -53,7 +53,7 @@
 }
 
 @media (max-width: 768px) {
-	.description {
+	.experience-description {
 		text-align: start !important;
 	}
 }
