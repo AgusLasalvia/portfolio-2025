@@ -1,0 +1,62 @@
+.spinner {
+  width: 70%;
+  overflow: hidden;
+  position: relative;
+  margin: 50px auto;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.spinner::before {
+  left: 0;
+  background: linear-gradient(to right, #121212, transparent);
+}
+
+.spinner::after {
+  right: 0;
+  background: linear-gradient(to left, #121212, transparent);
+}
+
+.track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+.skill {
+  display: inline-block;
+  width: 100px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.skill img {
+  width: 45px;
+}
+
+@media (max-width: 768px) {
+	.spinner {
+		width: 100%;
+	}
+	.skill {
+		width: 80px;
+		margin-right: 15px;
+	}
+	.skill img {
+		width: 35px;
+	}
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

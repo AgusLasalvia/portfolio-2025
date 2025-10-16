@@ -1,0 +1,35 @@
+---
+import Layout from "../layout/Layout.astro";
+import SkillSpinner from "../components/SkillSpinner.astro";
+import Section from "../components/Section.astro";
+import Profile from "../components/Profile.astro";
+import Experience from "../components/Experience.astro";
+
+const social = [
+	{
+		icon: "fa-brands fa-linkedin-in fa-xl",
+		href: "https://www.linkedin.com/in/agustin-lasalvia/",
+	},
+	{
+		icon: "fa-brands fa-github-alt fa-xl",
+		href: "https://github.com/AgusLasalvia",
+	},
+	{
+		icon: "fa-brands fa-instagram fa-xl",
+		href: "https://www.instagram.com/agustin.lasalvia/",
+	},
+];
+---
+
+<Layout>
+	<Section >
+		<Profile />
+	</Section>
+	<Section id="teck" title="Tech Stack">
+		<SkillSpinner />
+	</Section>
+
+	<Section id="experience" title="Experience">
+		<Experience />
+	</Section>
+</Layout>

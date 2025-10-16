@@ -1,0 +1,38 @@
+---
+import "../styles/experience.css";
+
+import ExperienceCard from "./ExperienceCard.astro";
+
+const experience = [
+	{
+		role: "IT Technician",
+		company: "UDELAR",
+		period: "2021 - Present",
+		location: "Montevideo - Uruguay",
+		description:
+			"Responsibilities. Properly configure and install the hardware and software on the relevant devices, and configure the software and drivers as necessary. Ensure proper maintenance and repair of all IT equipment and accessories, including routers and printers, etc.",
+	},
+	{
+		role: "Backend Developer",
+		company: "Freelance",
+		period: "2023 - 2024",
+		location: "Montevideo - Uruguay",
+		description:
+			"Responsible for the design, development, implementation, and updating of various backend systems. Utilized development tools and programming languages such as Node.js for backend logic and MongoDB for data storage, including proper data validation.",
+	},
+];
+---
+
+<div class="experience-container">
+	{
+		experience.map((item) => (
+			<ExperienceCard
+				role={item.role}
+				company={item.company}
+				period={item.period}
+				location={item.location}
+				description={item.description}
+			/>
+		))
+	}
+</div>

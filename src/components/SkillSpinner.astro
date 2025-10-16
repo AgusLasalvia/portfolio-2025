@@ -1,0 +1,22 @@
+---
+import "../styles/spinner.css";
+
+const skills = [
+  { title: "C#", img: "tech/csharp.png" },
+  { title: "NodeJS", img: "tech/node.png" },
+  { title: "MySQL", img: "tech/mysql.png" },
+  { title: "Python", img: "tech/python.png" },
+  { title: "React", img: "tech/react.png" },
+  { title: "TypeScript", img: "tech/typescript.png" },
+];
+---
+
+<div class="spinner">
+  <div class="track">
+    {[...skills, ...skills].map((skill, i) => (
+      <div class="skill" title={skill.title} style={`--i: ${i}`}>
+        <img src={skill.img} alt={skill.title} />
+      </div>
+    ))}
+  </div>
+</div>

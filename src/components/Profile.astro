@@ -1,0 +1,52 @@
+---
+import "../styles/profile.css";
+import Image from "astro/components/Image.astro";
+
+const social = [
+	{ icon: "fab fa-github", href: "https://github.com/AgusLasalvia" },
+	{ icon: "fab fa-linkedin", href: "https://linkedin.com/in/agustin-lasalvia" },
+	{ icon: "fa-solid fa-envelope", href: "mailto:agus.blumenfeld13@gmail.	com" },
+];
+---
+
+<div class="profile-section">
+	<figure class="profile-image">
+		<Image
+			src="/profile.jpg"
+			alt="Profile Picture"
+			width={250}
+			height={250}
+			class="rounded-image"
+		/>
+	</figure>
+
+	<div class="profile-content">
+		<div class="profile-info">
+			<h1 class="name">Agustin Lasalvia</h1>
+			<p class="role">Full Stack Developer</p>
+			<p class="location">Montevideo - Uruguay</p>
+		</div>
+
+		<p class="description">
+			I'm a Junior Full-Stack Developer with a passion for creating and solving
+			problems, ready for new adventures!
+		</p>
+
+		<div class="actions">
+			<!-- Botón de descarga -->
+			<a href="/files/AgustinLasalviaCV.pdf" download class="download-btn">
+				Download CV
+			</a>
+
+			<div class="social-links">
+				{
+					social.map((link) => (
+						<a href={link.href} class="social-icon">
+							<i class={link.icon} />
+						</a>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</div>

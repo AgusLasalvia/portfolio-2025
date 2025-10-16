@@ -1,0 +1,18 @@
+---
+import "../styles/experience-card.css";
+
+const { role, company, period, location, description } = Astro.props;
+---
+
+<div class="experience-card">
+	<div class="header">
+		<div class="title">
+			<h3>{role}</h3>
+			<span class="period">{period}</span>
+		</div>
+		<p class="company">{company}</p>
+		<p class="location">{location}</p>
+	</div>
+
+	<p class="description">{description}</p>
+</div>
