@@ -137,3 +137,9 @@
 	font-size: 0.75rem;
 	color: white;
 }
+
+@media (max-width:768px) {
+	.description {
+		text-align: start;
+	}
+}
