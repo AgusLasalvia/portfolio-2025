@@ -1,0 +1,58 @@
+---
+import "../styles/project-card.css";
+
+const { title, description, image, stack, github, demo, status } = Astro.props;
+---
+
+<div class="project-card">
+	<!-- Status Badge -->
+	<div class="status-badge">
+		<span
+			class={status === "Finished" ? "badge finished" : "badge in-progress"}
+		>
+			{status}
+		</span>
+	</div>
+
+	<div class="image-container">
+		<img src={image} alt={title} class="project-image" loading="lazy" />
+
+		<div class="overlay">
+			{
+				github && (
+					<a
+						href={github}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="icon-link"
+					>
+						<i class="fab fa-github" />
+					</a>
+				)
+			}
+			{
+				demo && (
+					<a
+						href={demo}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="icon-link"
+					>
+						<i class="fas fa-external-link-alt" />
+					</a>
+				)
+			}
+		</div>
+	</div>
+
+	<div class="content">
+		<h3 class="title">{title}</h3>
+		<p class="description">
+			{description || "Project description coming soon..."}
+		</p>
+
+		<div class="tech-stack">
+			{stack.map((tech: any) => <span class="tech-tag">{tech}</span>)}
+		</div>
+	</div>
+</div>
