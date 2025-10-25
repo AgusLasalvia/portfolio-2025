@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+import ParticlesBackground from "../components/ParticlesBackground";
 import "../styles/global.css";
 ---
 
@@ -19,8 +20,19 @@ import "../styles/global.css";
 	</header>
 
 	<body>
-		<slot />
+		<main>
+			<ParticlesBackground client:load/>
+			<slot />
+		</main>
 	</body>
 
 
 </html>
+<style>
+	main{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+</style>
