@@ -18,12 +18,12 @@
 
 .spinner::before {
 	left: 0;
-	background: linear-gradient(to right, #121212, transparent);
+	background: linear-gradient(to right, #000000, transparent);
 }
 
 .spinner::after {
 	right: 0;
-	background: linear-gradient(to left, #121212, transparent);
+	background: linear-gradient(to left, #000000, transparent);
 }
 
 .track {
